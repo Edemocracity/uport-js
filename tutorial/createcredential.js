@@ -18,7 +18,7 @@ var credentials = new uport.Credentials({
 app.get('/', function (req, res) {
   credentials.attest({
     sub: '2ovkMrL4jxwRbr1ia9CUUMN5TddtBx9zKmN',
-    exp: 1552046024213,
+    exp: 1552046024,
     claim: {'Custom Attestation' : 'Custom Value'}
   }).then(function (att) {
     console.log(att)
@@ -30,6 +30,6 @@ app.get('/', function (req, res) {
   })
 })
 
-var server = app.listen(8081, function () {  
+var server = app.listen(8081, function () {
   console.log("Tutorial app running...")
 })
